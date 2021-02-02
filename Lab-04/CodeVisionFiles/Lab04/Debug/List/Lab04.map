@@ -1,0 +1,50 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+START                                                                             0x01CE       2
+STOP                                                                              0x01D0       2
+CNT1                                                                              0x01D2       2
+CNT2                                                                              0x01D4       2
+CNT3                                                                              0x01D6       2
+CNT4                                                                              0x01D8       2
+CE                                                                                0x01DA       2
+space                                                                             0x01DC       2
+_base_y                                                                           0x01DE       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+_lcd_x                                                                            R5           1
+_lcd_y                                                                            R4           1
+_lcd_maxx                                                                         R7           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+ext_int0_isr                                                                      0x000C5     72
+ext_int1_isr                                                                      0x0010D     52
+timer0_ovf_isr                                                                    0x00141     19
+main                                                                              0x00154      7
+ioInit                                                                            0x0015B     12
+timerInit                                                                         0x00167     23
+interruptInit                                                                     0x0017E     19
+question_01                                                                       0x00191     14
+question_02                                                                       0x0019F     10
+question_03                                                                       0x001A9     14
+counter                                                                           0x001B7    132
+_lcd_write_nibble_G100                                                            0x0023B     20
+_lcd_write_data                                                                   0x0024F     12
+lcd_gotoxy                                                                        0x0025B     13
+lcd_clear                                                                         0x00268     12
+lcd_putchar                                                                       0x00274     21
+lcd_puts                                                                          0x00289     17
+lcd_init                                                                          0x0029A     46
+put_buff_G101                                                                     0x002C8     58
+_print_G101                                                                       0x00302    308
+sprintf                                                                           0x00436     52
+strlen                                                                            0x0046A     12
+strlenf                                                                           0x00476     13

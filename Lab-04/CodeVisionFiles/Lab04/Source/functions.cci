@@ -1,0 +1,9 @@
+VERSION:3 SOURCE_TIMESTAMP:51568A73
+NODE:I LEVEL:0 LINE:1 "C:\cvavr\BIN\Lab04\Source\define.h"
+NODE:F LEVEL:0 LINE:3 "ioInit(void)"
+NODE:F LEVEL:0 LINE:32 "timerInit(void)"
+NODE:F LEVEL:0 LINE:82 "interruptInit(void)"
+NODE:F LEVEL:0 LINE:124 "question_01(void)"
+NODE:F LEVEL:0 LINE:137 "question_02(void)"
+NODE:F LEVEL:0 LINE:145 "question_03(void)"
+NODE:F LEVEL:0 LINE:155 "counter(void)"
