@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:5153A4B3
+NODE:M LEVEL:0 LINE:2 "_define_INCLUDED_"
+NODE:I LEVEL:0 LINE:4 "C:\cvavr\BIN\Lab03\source\functions.h"
+NODE:I LEVEL:0 LINE:5 "C:\cvavr\inc\mega16.h"
+NODE:I LEVEL:0 LINE:6 "C:\cvavr\inc\alcd.h"
+NODE:I LEVEL:0 LINE:7 "C:\cvavr\inc\delay.h"
+NODE:I LEVEL:0 LINE:8 "C:\cvavr\inc\string.h"

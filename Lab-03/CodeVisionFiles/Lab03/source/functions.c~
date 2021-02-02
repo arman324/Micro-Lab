@@ -1,0 +1,305 @@
+#include <define.h>
+
+void question_01(){
+    //lcd_init(16);  // Alphanumeric LCD initialization
+    lcd_clear();
+    lcd_gotoxy(0,0);
+    lcd_puts("Arman Riasi");
+    lcd_gotoxy(0,1);
+    lcd_putsf("9638283");
+    delay_ms(2200);
+}
+
+void question_02(){
+    char *myMsg = "Welcome to the online lab classes due to Corona disease.";
+    char *MsgOnTheLCD = "";
+    char *space = "                ";
+    int i = 0;
+    lcd_clear();
+
+    lcd_gotoxy(0,1);
+    lcd_puts(space);
+
+    lcd_clear();
+        for (i = 0; i < strlen(myMsg); i++){
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            strncpy(MsgOnTheLCD,myMsg+i,16);
+            lcd_puts(MsgOnTheLCD);
+            if (i == 0) delay_ms(750);
+            delay_ms(140);
+            lcd_gotoxy(0,1);
+
+            lcd_puts(space);
+        }
+
+
+}
+
+
+void keyPad(){
+    unsigned char row;
+    unsigned char column;
+    DDRB = 0xF0;
+    PORTB = 0xFF;
+
+
+        while(1){
+            PORTB = 0b11111111;
+            column = (PINB & 0b00001111);
+            if (column != 0b00000000) break;
+        }
+
+         while(1){
+            PORTB = 0b11111111;
+            column= (PINB & 0b00001111);
+            if (column == 0b00000000) break;
+        }
+
+
+        while(1){
+            while (1) {
+                delay_ms(25);
+                column = (PINB & 0b00001111);
+                if (column == 0b00000000) break;
+            }
+
+            delay_ms(25);
+            column = (PINB & 0b00001111);
+            if(column != 0b00000000) break;
+        }
+
+        while (1){
+            PORTB = 0b00011111;
+            column = (PINB & 0b00001111);
+
+            if (column != 0b00000000)
+            {
+                row = 0;
+                break;
+            }
+
+            PORTB = 0b00101111;
+            column = (PINB & 0b00001111);
+
+            if (column != 0b00000000)
+            {
+                row = 1;
+                break;
+            }
+
+            PORTB = 0b01001111;
+            column = (PINB & 0b00001111);
+
+            if (column != 0b00000000)
+            {
+                row = 2;
+                break;
+            }
+
+            PORTB = 0b10001111;
+            column = (PINB & 0b00001111);
+
+            if (column != 0b00000000)
+            {
+                row = 3;
+                break;
+            }
+        }
+
+        switch (column) {
+            case 0b00000001:
+                lcd_putchar(myKeyPad[row][0]);
+                tempForKeyPadEntry = myKeyPad[row][0];
+                break;
+            case 0b00000010:
+                lcd_putchar(myKeyPad[row][1]);
+                tempForKeyPadEntry = myKeyPad[row][1];
+                break;
+            case 0b00000100:
+                lcd_putchar(myKeyPad[row][2]);
+                tempForKeyPadEntry = myKeyPad[row][2];
+                break;
+            case 0b00001000:
+                lcd_putchar(myKeyPad[row][3]);
+                tempForKeyPadEntry = myKeyPad[row][3];
+                break;
+        }
+
+
+}
+
+
+void question_03(){
+        unsigned int counter = 0;
+        lcd_clear();
+        lcd_gotoxy(0,0);
+        lcd_puts("Question 3:");
+        delay_ms(500);
+        lcd_clear();
+        lcd_gotoxy(0,0);
+      while(1){
+        if (counter == 3) break;
+        keyPad();
+        counter++;
+      }
+}
+
+void question_04(){
+            DDRB = 0xF0;
+            PORTB = 0xFF;
+            #asm("sei")     // Global enable interrupts
+
+}
+
+void question_05(){
+        unsigned char keyPadFirstEntry;
+        unsigned char keyPadSecondEntry;
+
+        lcd_clear();
+        lcd_gotoxy(0,0);
+        lcd_puts("Enter number forSPEED(0-50): ");
+        keyPad();
+        keyPadFirstEntry = tempForKeyPadEntry;
+        keyPad();
+        keyPadSecondEntry = tempForKeyPadEntry;
+        delay_ms(50);
+        if(keyPadFirstEntry > '5' || keyPadSecondEntry > '9' || keyPadFirstEntry < '0' || (keyPadFirstEntry == '5' && keyPadSecondEntry != '0')){
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            lcd_puts("SPEED EE for ");
+            lcd_putchar(keyPadFirstEntry);
+            lcd_putchar(keyPadSecondEntry);
+        }
+        else {
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            lcd_puts("Set successfully");
+            lcd_putchar(keyPadFirstEntry);
+            lcd_putchar(keyPadSecondEntry);
+        }
+
+        delay_ms(1400);
+
+        lcd_clear();
+        lcd_gotoxy(0,0);
+        lcd_puts("Enter number forTIME(0-99s): ");
+        keyPad();
+        keyPadFirstEntry = tempForKeyPadEntry;
+        keyPad();
+        keyPadSecondEntry = tempForKeyPadEntry;
+        delay_ms(50);
+        if(keyPadFirstEntry > '9' || keyPadSecondEntry > '9'){
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            lcd_puts("TIME EE for ");
+            lcd_putchar(keyPadFirstEntry);
+            lcd_putchar(keyPadSecondEntry);
+        }
+        else {
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            lcd_puts("Set successfully");
+            lcd_putchar(keyPadFirstEntry);
+            lcd_putchar(keyPadSecondEntry);
+        }
+
+        delay_ms(1400);
+
+        lcd_clear();
+        lcd_gotoxy(0,0);
+        lcd_puts("Enter number forWEIGHT(0-99F): ");
+        keyPad();
+        keyPadFirstEntry = tempForKeyPadEntry;
+        keyPad();
+        keyPadSecondEntry = tempForKeyPadEntry;
+        delay_ms(50);
+        if(keyPadFirstEntry > '9' || keyPadSecondEntry > '9'){
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            lcd_puts("WEIGHT EE for ");
+            lcd_putchar(keyPadFirstEntry);
+            lcd_putchar(keyPadSecondEntry);
+        }
+        else {
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            lcd_puts("Set successfully");
+            lcd_putchar(keyPadFirstEntry);
+            lcd_putchar(keyPadSecondEntry);
+        }
+
+        delay_ms(1400);
+
+        lcd_clear();
+        lcd_gotoxy(0,0);
+        lcd_puts("Enter number forTEMP(20-80C): ");
+        keyPad();
+        keyPadFirstEntry = tempForKeyPadEntry;
+        keyPad();
+        keyPadSecondEntry = tempForKeyPadEntry;
+        delay_ms(50);
+        if(keyPadFirstEntry > '8' || keyPadSecondEntry > '9' || keyPadFirstEntry < '2' || (keyPadFirstEntry == '8' && keyPadSecondEntry != '0')){
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            lcd_puts("TEMP EE for ");
+            lcd_putchar(keyPadFirstEntry);
+            lcd_putchar(keyPadSecondEntry);
+        }
+        else {
+            lcd_clear();
+            lcd_gotoxy(0,0);
+            lcd_puts("Set successfully");
+            lcd_putchar(keyPadFirstEntry);
+            lcd_putchar(keyPadSecondEntry);
+        }
+
+        delay_ms(1400);
+
+}
+
+
+void ioInit(){
+    // Input/Output Ports initialization
+    // Port A initialization
+    // Function: Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0=Out
+    DDRA=(1<<DDA7) | (1<<DDA6) | (1<<DDA5) | (1<<DDA4) | (1<<DDA3) | (1<<DDA2) | (1<<DDA1) | (1<<DDA0);
+    // State: Bit7=0 Bit6=0 Bit5=0 Bit4=0 Bit3=0 Bit2=0 Bit1=0 Bit0=0
+    PORTA=(0<<PORTA7) | (0<<PORTA6) | (0<<PORTA5) | (0<<PORTA4) | (0<<PORTA3) | (0<<PORTA2) | (0<<PORTA1) | (0<<PORTA0);
+
+
+
+
+}
+
+void interruptInit(){
+
+    // External Interrupt(s) initialization
+    // INT0: Off
+    // INT1: On
+    // INT1 Mode: Rising Edge
+    // INT2: Off
+
+    GICR|=(1<<INT1) | (0<<INT0) | (0<<INT2);
+    MCUCR=(1<<ISC11) | (1<<ISC10) | (0<<ISC01) | (0<<ISC00);
+    MCUCSR=(0<<ISC2);
+    GIFR=(1<<INTF1) | (0<<INTF0) | (0<<INTF2);
+
+
+}
+
+
+// External Interrupt 1 service routine
+interrupt [EXT_INT1] void myInterrupt(void)
+{
+
+        DDRC = 0x01;
+        PORTC = 0x01;
+        DDRB = 0xF0;
+        PORTB = 0xFF;
+        keyPad();
+        DDRB = 0xF0;
+        PORTB = 0xFF;
+        PORTC = 0x00;
+
+}
