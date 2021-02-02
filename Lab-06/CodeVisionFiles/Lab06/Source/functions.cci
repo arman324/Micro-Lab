@@ -1,0 +1,13 @@
+VERSION:3 SOURCE_TIMESTAMP:51660922
+NODE:I LEVEL:0 LINE:1 "C:\cvavr\BIN\Lab06\Source\define.h"
+NODE:F LEVEL:0 LINE:4 "ioInit(void)"
+NODE:F LEVEL:0 LINE:33 "timerInit_Q3(void)"
+NODE:F LEVEL:0 LINE:85 "timerInit_Q1_Q2(void)"
+NODE:F LEVEL:0 LINE:135 "interruptInit(void)"
+NODE:F LEVEL:0 LINE:149 "ADCinit_Q1_Q3(void)"
+NODE:F LEVEL:0 LINE:175 "ADCinit_Q2(void)"
+NODE:F LEVEL:0 LINE:209 "read_adc(unsigned char adc_input)"
+NODE:F LEVEL:0 LINE:222 "question_01(void)"
+NODE:F LEVEL:0 LINE:251 "question_02(void)"
+NODE:F LEVEL:0 LINE:260 "question_03(void)"
+NODE:F LEVEL:0 LINE:269 "question_04(void)"
