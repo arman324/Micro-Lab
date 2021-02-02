@@ -1,0 +1,72 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+myName                                                                            0x03D0      20
+myNameWithParenthesis                                                             0x03E4      20
+calculate_UBBR                                                                    0x03F8       4
+calculate_UBBR_int                                                                0x03FC       2
+counter                                                                           0x03FE       2
+temp                                                                              0x0400      30
+temp2                                                                             0x041E       2
+check                                                                             0x0420       1
+countNumber                                                                       0x0421       2
+i                                                                                 0x0423       2
+myData                                                                            0x0425       1
+rx_buffer                                                                         0x0426      16
+tx_buffer                                                                         0x0436       8
+_base_y                                                                           0x043E       4
+p_S1020026000                                                                     0x0442       2
+_seed                                                                             0x0444       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+rx_wr_index                                                                       R5           1
+rx_rd_index                                                                       R4           1
+rx_counter                                                                        R7           1
+rx_buffer_overflow                                                                R2.0      1bit
+tx_wr_index                                                                       R6           1
+tx_rd_index                                                                       R9           1
+tx_counter                                                                        R8           1
+_lcd_x                                                                            R11          1
+_lcd_y                                                                            R10          1
+_lcd_maxx                                                                         R13          1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+usart_rx_isr                                                                      0x001B1     31
+getchar3                                                                          0x001D0     19
+usart_tx_isr                                                                      0x001E3     23
+main                                                                              0x001FA      9
+ioInit                                                                            0x00203      7
+UART_INIT                                                                         0x0020A    186
+question_02                                                                       0x002C4     51
+question_03                                                                       0x002F7     71
+question_04                                                                       0x0033E    136
+_lcd_write_nibble_G100                                                            0x003C6     21
+_lcd_write_data                                                                   0x003DB     13
+lcd_gotoxy                                                                        0x003E8     13
+lcd_clear                                                                         0x003F5     12
+lcd_putchar                                                                       0x00401     23
+lcd_puts                                                                          0x00418     12
+lcd_init                                                                          0x00424     46
+getchar                                                                           0x00452      4
+putchar                                                                           0x00456      7
+puts                                                                              0x0045D     13
+gets                                                                              0x0046A     47
+put_usart_G101                                                                    0x00499     10
+put_buff_G101                                                                     0x004A3     58
+_print_G101                                                                       0x004DD    308
+sprintf                                                                           0x00611     46
+printf                                                                            0x0063F     31
+strcmp                                                                            0x0065E     20
+strlen                                                                            0x00672     12
+strlenf                                                                           0x0067E     13
+strpbrkf                                                                          0x0068B     23
+strspnf                                                                           0x006A2     21
+strtok                                                                            0x006B7     72
