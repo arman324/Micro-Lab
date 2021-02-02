@@ -1,0 +1,29 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+fourthSevenSeg                                                                    0x0160       2
+sevenSeg                                                                          0x0162      20
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+count                                                                             R4,R5        2
+temp                                                                              R6,R7        2
+firstSevenSeg                                                                     R8,R9        2
+secondSevenSeg                                                                    R10,R11      2
+thirdSevenSeg                                                                     R12,R13      2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+main                                                                              0x0006D      8
+question_01                                                                       0x00075     20
+question_02                                                                       0x00089     39
+question_03                                                                       0x000B0     55
+question_04                                                                       0x000E7     21
+question_05                                                                       0x000FC     70
+question_06                                                                       0x00142     89
