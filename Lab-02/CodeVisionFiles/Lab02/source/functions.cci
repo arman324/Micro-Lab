@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:51467659
+NODE:I LEVEL:0 LINE:3 "C:\cvavr\BIN\Lab02\source\define.h"
+NODE:F LEVEL:0 LINE:6 "question_01(int number,unsigned char portSelect,int delayTime)"
+NODE:F LEVEL:0 LINE:56 "question_02(int delayTime,int position)"
+NODE:F LEVEL:0 LINE:136 "question_03(unsigned char outputPortSelect,unsigned char inputPortSelect)"
+NODE:F LEVEL:0 LINE:203 "question_04(int direction,int sevenSegOn)"
+NODE:F LEVEL:0 LINE:246 "question_05(int amountOfReduction)"
