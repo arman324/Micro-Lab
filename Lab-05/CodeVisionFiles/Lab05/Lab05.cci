@@ -1,0 +1,11 @@
+VERSION:3 SOURCE_TIMESTAMP:5162A693
+NODE:I LEVEL:0 LINE:24 "C:\cvavr\BIN\Lab05\Source\define.h"
+NODE:V LEVEL:0 LINE:26 "inputNumber -> RAM:????"
+NODE:V LEVEL:0 LINE:27 "dutyCycle -> RAM:????"
+NODE:V LEVEL:0 LINE:28 "ocrNumber -> RAM:????"
+NODE:V LEVEL:0 LINE:29 "CNT -> RAM:????"
+NODE:V LEVEL:0 LINE:30 "TempCNT -> RAM:????"
+NODE:V LEVEL:0 LINE:31 "LeftRight -> RAM:????"
+NODE:F LEVEL:0 LINE:35 "timer0_ovf_isr(void)"
+NODE:F LEVEL:0 LINE:49 "timer2_ovf_isr(void)"
+NODE:F LEVEL:0 LINE:59 "main(void)"

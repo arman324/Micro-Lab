@@ -1,0 +1,10 @@
+VERSION:3 SOURCE_TIMESTAMP:5162A5D5
+NODE:I LEVEL:0 LINE:1 "C:\cvavr\BIN\Lab05\Source\define.h"
+NODE:F LEVEL:0 LINE:3 "ioInit(void)"
+NODE:F LEVEL:0 LINE:32 "timerInit(void)"
+NODE:F LEVEL:0 LINE:122 "question_01(void)"
+NODE:F LEVEL:0 LINE:132 "question_03(void)"
+NODE:F LEVEL:0 LINE:146 "question_04(void)"
+NODE:F LEVEL:0 LINE:162 "question_05(void)"
+NODE:F LEVEL:0 LINE:168 "calculateSpeed(void)"
+NODE:F LEVEL:0 LINE:178 "runStepperMotor(void)"

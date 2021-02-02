@@ -1,0 +1,43 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+inputNumber                                                                       0x017B       2
+dutyCycle                                                                         0x017D       4
+ocrNumber                                                                         0x0181       4
+CNT                                                                               0x0185       2
+TempCNT                                                                           0x0187       2
+LeftRight                                                                         0x0189       2
+_base_y                                                                           0x018B       4
+_seed                                                                             0x018F       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+_lcd_x                                                                            R5           1
+_lcd_y                                                                            R4           1
+_lcd_maxx                                                                         R7           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+timer0_ovf_isr                                                                    0x00083     68
+timer2_ovf_isr                                                                    0x000C7     20
+main                                                                              0x000DB      7
+ioInit                                                                            0x000E2     14
+timerInit                                                                         0x000F0     38
+question_05                                                                       0x00116      6
+calculateSpeed                                                                    0x0011C      9
+runStepperMotor                                                                   0x00125    152
+_lcd_write_nibble_G100                                                            0x001BD     20
+_lcd_write_data                                                                   0x001D1     12
+lcd_gotoxy                                                                        0x001DD     13
+lcd_clear                                                                         0x001EA     12
+lcd_putchar                                                                       0x001F6     21
+lcd_puts                                                                          0x0020B     17
+lcd_init                                                                          0x0021C     46
+ftrunc                                                                            0x0024A     49
+floor                                                                             0x0027B     23
